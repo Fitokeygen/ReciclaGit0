@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Activity grafico de registro e inicio de sesión para el conductor.
+
+   "<RelativeLayout..."
+Primero cambiamos el tipo de diseño o layout desde constraint layout a relative layout solo para comodidad
+de posicionamiento de los elementos.  android:background="#31094F" determina el color de fondo
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#31094F"
+    tools:context=".ConductorSignUp">
+
+    <!--
+    <TextView...
+    Corresponde a una etiqueta que tendrá las siguientes caracteristicas:
+    a) android:text: Lo que dirá el texto
+    b) android:layout_width, height, marginStart, marginTop: Para determinar la posicion de la etiqueta
+    c) android:textSize: Para determinar el tamaño de la etiqueta
+    -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="79dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="102dp"
+        android:text="@string/registro_conductor"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp" />
+
+
+    <!--
+    <EditText...
+Corresponde a un campo de texto que en este caso recibe el correo electronico del usuario.
+
+Caracteristicas:
+    a) android:id: id del elemento.
+    b) android:text: Lo que dirá el texto
+    c) android:layout_width, height, marginStart, marginTop: Para determinar la posicion de la etiqueta
+    d) android:textSize: Para determinar el tamaño de la etiqueta
+    e) android:hint: Vendría siendo un placeholder, o un texto que desaparece al hacer click dentro. La idea es dar una pista de lo
+    que el cuadro de texto recibe como informacion.
+    f) android:inputType: el tipo de elemento. Si fuera "password" se encriptaria lo que se escribe y no aparecería en pantalla.
+    -->
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="256dp"
+        android:ems="10"
+        android:hint="@string/correo_electronico"
+        android:inputType="textEmailAddress"
+        android:autofillHints="" />
+
+    <!--
+    <EditText...
+        Corresponde a un campo de texto que en este caso recibe la contraseña del usuario.
+
+        Caracteristicas:
+    a) android:id: id del elemento.
+    b) android:text: Lo que dirá el texto
+    c) android:layout_width, height, marginStart, marginTop: Para determinar la posicion de la etiqueta
+    d) android:textSize: Para determinar el tamaño de la etiqueta
+    e) android:hint: Vendría siendo un placeholder, o un texto que desaparece al hacer click dentro. La idea es dar una pista de lo
+    que el cuadro de texto recibe como informacion.
+    f) android:inputType: el tipo de elemento. Como es "password" se encripta lo que se escribe y no aparece en pantalla.
+    -->
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="291dp"
+        android:ems="10"
+        android:hint="@string/contrase_a"
+        android:inputType="textPassword"
+        android:autofillHints="" />
+
+
+    <!--
+    <Button...
+Corresponde a un botón que recibe la informacion para ingresar a la aplicacion e iniciar sesión.
+
+Caracteristicas:
+    a) android:id: id del elemento.
+    b) android:text: Lo que tiene escrito el botón.
+    c) android:layout_width, height, marginStart, marginTop: Para determinar la posicion de la etiqueta
+    d) android:textSize: Para determinar el tamaño de la etiqueta
+    -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="187dp"
+        android:text="@string/ingresar" />
+
+    <!--
+    <Button...
+Corresponde a un botón que nos redirige a una pagina de registro en caso de que no tengamos una cuenta.
+
+Caracteristicas:
+    a) android:id: id del elemento.
+    b) android:text: Lo que tiene escrito el botón.
+    c) android:layout_width, height, marginStart, marginTop: Para determinar la posicion de la etiqueta
+    d) android:textSize: Para determinar el tamaño de la etiqueta
+    -->
+    <Button
+        android:id="@+id/button_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="142dp"
+        android:layout_marginBottom="187dp"
+        android:text="@string/registrarse" />
+
+
+    <!--
+    <TextView...
+    Corresponde a una etiqueta que funcionará de hipervinculo al mismo tiempo
+    Caracteristicas:
+    a) android:text: Lo que dirá el texto
+    b) android:layout_width, height, marginStart, marginTop: Para determinar la posicion de la etiqueta
+    c) android:textSize: Para determinar el tamaño de la etiqueta
+    -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="88dp"
+        android:text="@string/no_tengo_una_cuenta_creada"
+        android:textColor="@color/colorAccent" />
+
+
+</RelativeLayout>
